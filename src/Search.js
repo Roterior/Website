@@ -22,22 +22,21 @@ export class Search extends React.Component {
     }
 
     handleYearChange(selectedOption) {
-        this.setState({
-            year: selectedOption.value
-
-        });
-    }
         // const { result } = this.state;
-        // const resultArray = this.state.result.filter(
-        //     (item) => item.release_date.indexOf(selectedOption.value) !== -1
-        // );
+        const resultArray = this.state.result.filter(
+            (item) => item.release_date.indexOf(selectedOption.value) !== -1
+        );
         // let opt = selectedOption;
         // const { year } = this.state;
         // year = selectedOption;
+        this.setState({
+            year: selectedOption,
+            result: resultArray
+        });
         // const { year } = this.state;
         // year = selectedOption;
         // this.props.handleYearChange(selectedOption);
-
+    }
 
     handleSearchInputChange(event) {
         this.setState({
