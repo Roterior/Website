@@ -1,23 +1,27 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import MovieList from "./MovieList";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Search } from './Search.js';
 
-// var express = require('express');
+// import MovieList from "./MovieList";
+
+//import express from "express";
+//let express = require('express');
 // var cors = require('cors');
-// var app = express();
-// app.use(cors());
+//let app = express();
+//app.use(cors());
 
-import "./styles";
+//import proxy from 'http-proxy-middleware';
+//app.use('/api/**', proxy({ target: "http://localhost:8082" }));
 
-class BodyPage extends React.Component {
+import './styles';
 
-    render() {
-        return ( <div>
-                    Some information!
-                    <MovieList />
-                </div>
-            )
-    }
-}
+export const DivRoot = () => (
+    <div>
+        <Search />
+    </div>
+)
 
-ReactDOM.render(<BodyPage />, document.getElementById("root"));
+ReactDOM.render(
+    <DivRoot />,
+    document.getElementById("root")
+);
