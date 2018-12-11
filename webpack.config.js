@@ -10,12 +10,6 @@ module.exports = {
     devServer: {
         inline:true,
         port: 8081
-        // historyApiFallback: true,
-        // noInfo: true,
-        // proxy: {
-        //     '/' : 'http://localhost:8082',
-        //     secure: false
-        // }
     },
     entry: './src/index.jsx',
     output: {
@@ -24,19 +18,6 @@ module.exports = {
     },
     module: {
         rules: [
-            {
-                test: /\.(gif|png|jpe?g|svg)$/i,
-                use: [
-                'file-loader',
-                {
-                    loader: 'image-webpack-loader',
-                    options: {
-                    bypassOnDebug: true, // webpack@1.x
-                    disable: true, // webpack@2.x and newer
-                    },
-                },
-              ],
-            },
             {
                 test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
